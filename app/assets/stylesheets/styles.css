@@ -1,0 +1,11 @@
+body{
+	background: snow;
+}
+
+.main-image {
+	width: 300px;
+}
+
+.show-flower {
+	max-width: 400px;
+}

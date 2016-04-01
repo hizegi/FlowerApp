@@ -1,0 +1,12 @@
+<h1>Check out these flowers by <%= @user.email %></h1>
+
+<% @flowers.each do |f| %>
+<h4><%= f.name%></h4>
+<p><img class="show-flower" src="<%= f.content %>"></p>
+<%= link_to 'View Post', user_flower_path(@user, f.id) %>
+
+<% end %>
+
+<br>
+
+<%= link_to 'InstaFlower Home', root_path %>

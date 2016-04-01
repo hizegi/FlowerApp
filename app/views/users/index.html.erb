@@ -1,14 +1,22 @@
 <h1>InstaFlower</h1>
 
+<h3>Fresh Picked Flowers</h3>
+<% @flowers.each do |flower| %>
+	<h3><%= flower.name %> </h3><br/>
+	<img class="main-image" src="<%= flower.content%>"/><br>
+	<%= link_to 'Show Flower', user_flower_path(flower.user_id, flower.id) %><br>
+<% end %>
+
 <% @users.each do |user| %>
 	<h3><%= user.email %> </h3><br/>
-
-
 	<%= link_to 'Show', user_path(user.id) %><br>
-
 <% end %>
+
+
+
 
 <% if user_signed_in? %>
-<h1><%= link_to 'Post a New Flower', new_user_flower_path(current_user.id)%></h1>
+	<h1><%= link_to 'Post a New Flower', new_user_flower_path(current_user.id)%></h1>
 <% end %>
+
 
