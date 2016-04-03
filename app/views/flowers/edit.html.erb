@@ -3,5 +3,6 @@
 <%= form_for @flower, url: user_flower_path do |f| %>
 	<h3>Title: <%= f.text_field :name %></h3></br>
 	<h4>Image URL: <%= f.text_field :content %></h4></br>
+	<h4>Description: <%= f.text_field :description %></h4></br>
 	<%= f.submit %>
 <% end %>

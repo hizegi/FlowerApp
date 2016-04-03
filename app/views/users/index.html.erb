@@ -1,25 +1,14 @@
 <section class="rw-wrapper">
 	<h1>InstaFlower</h1>
 	<h2 class="rw-sentence">
-		<span>Real poetry is like</span>
-		<span>creating</span>
-		<div class="rw-words rw-words-1">
-			<span>breathtaking moments</span>
-			<span>lovely sounds</span>
-			<span>incredible magic</span>
-			<span>unseen experiences</span>
-			<span>happy feelings</span>
-			<span>beautiful butterflies</span>
-		</div>
-		<br />
-		<span>with a silent touch of</span>
+		<span>Where flowers bloom so does</span>
 		<div class="rw-words rw-words-2">
-			<span>sugar</span>
-			<span>spice</span>
-			<span>colors</span>
-			<span>happiness</span>
-			<span>wonder</span>
-			<span>happiness</span>
+			<span>love.</span>
+			<span>happiness.</span>
+			<span>hope.</span>
+			<span>beauty.</span>
+			<span>peace.</span>
+			<span>wonder.</span>
 		</div>
 	</h2>
 </section>
@@ -36,7 +25,7 @@
 				<img src="<%= flower.content%>" alt="flower picture 1"/>
 				<div>
 					<h3><%= flower.name %><span>/<%=flower.name%>/</h3>
-					<p>The soft petals blowing through the wind. Or some shit.</p>
+					<p><%= flower.description %></p>
 					<a href="#image-<%=flower.id + 1 %>" class="lb-prev">Prev</a>
 					<a href="#image-<%=flower.id - 1 %>" class="lb-next">Next</a>
 					<%= link_to 'Visit Flower', user_flower_path(flower.user_id, flower.id) %><br>

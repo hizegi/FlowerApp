@@ -2,13 +2,16 @@ body{
 	background: snow;
 }
 
-/*.main-image {
-	width: 300px;
+#img-div {
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+	position: relative;
 }
 
 .show-flower {
 	max-width: 400px;
-}*/
+}
 
 
 /*******************/
@@ -28,7 +31,12 @@ body{
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
 }
 
+#indent {
+	margin-left: 15%;
+}
+
 .rw-sentence span{
+
 	color: #444;
 	white-space: nowrap;
 	font-size: 200%;
@@ -48,9 +56,6 @@ body{
 	color: #6b969d;
 }
 
-.rw-words-1 span{
-	animation: rotateWordsFirst 18s linear infinite 0s;
-}
 .rw-words-2 span{
 	animation: rotateWordsSecond 18s linear infinite 0s;
 }
