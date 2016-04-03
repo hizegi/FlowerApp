@@ -6,5 +6,6 @@
 
 
 <% if @user == current_user %> <%= link_to 'Delete', @flower, :method => 'delete' %> <% end %>
+<% if @user == current_user %> <%= link_to 'Edit Post', edit_user_flower_path(@user, @flower.id) %> <% end %>
 <%= link_to 'InstaFlower Home', root_path %>
 <%= link_to 'User Page', user_path(@user.id) %>

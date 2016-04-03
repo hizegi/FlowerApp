@@ -33,7 +33,7 @@ class FlowersController < ApplicationController
 
 	def update
 		if @flower.update(flower_params)
-			redirect_to @flower
+			redirect_to '/users/'
 		else
 			render :action => :edit
 		end
@@ -41,7 +41,7 @@ class FlowersController < ApplicationController
 
 	def destroy
 		@flower.destroy
-		redirect_to user_url	
+		redirect_to root	
 	end
 
 	private

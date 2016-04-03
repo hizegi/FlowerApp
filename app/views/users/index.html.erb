@@ -37,9 +37,9 @@
 				<div>
 					<h3><%= flower.name %><span>/<%=flower.name%>/</h3>
 					<p>The soft petals blowing through the wind. Or some shit.</p>
-					<a href="image-10" class="lb-prev">Prev</a>
-					<a href="#image-2" class="lb-next">Next</a>
-					<%= link_to 'Show Flower', user_flower_path(flower.user_id, flower.id) %><br>
+					<a href="#image-<%=flower.id + 1 %>" class="lb-prev">Prev</a>
+					<a href="#image-<%=flower.id - 1 %>" class="lb-next">Next</a>
+					<%= link_to 'Visit Flower', user_flower_path(flower.user_id, flower.id) %><br>
 				</div>
 				<a href="#page" class="lb-close">x Close</a>
 			</div>
@@ -48,7 +48,7 @@
 </ul>
 
 
-
+<br><br>
 <% if user_signed_in? %>
 	<h1><%= link_to 'Post a New Flower', new_user_flower_path(current_user.id)%></h1>
 <% end %>
