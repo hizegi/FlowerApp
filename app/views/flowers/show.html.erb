@@ -4,5 +4,7 @@
 <p><img class="show-flower" src="<%= @flower.content %>"></p>
 <br>
 
+
+<% if @user == current_user %> <%= link_to 'Delete', @flower, :method => 'delete' %> <% end %>
 <%= link_to 'InstaFlower Home', root_path %>
 <%= link_to 'User Page', user_path(@user.id) %>

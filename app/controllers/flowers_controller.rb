@@ -41,8 +41,7 @@ class FlowersController < ApplicationController
 
 	def destroy
 		@flower.destroy
-		redirect_to flower_url
-		
+		redirect_to user_url	
 	end
 
 	private
