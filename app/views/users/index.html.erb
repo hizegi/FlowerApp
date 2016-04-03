@@ -1,17 +1,51 @@
-<h1>InstaFlower</h1>
+<section class="rw-wrapper">
+	<h1>InstaFlower</h1>
+	<h2 class="rw-sentence">
+		<span>Real poetry is like</span>
+		<span>creating</span>
+		<div class="rw-words rw-words-1">
+			<span>breathtaking moments</span>
+			<span>lovely sounds</span>
+			<span>incredible magic</span>
+			<span>unseen experiences</span>
+			<span>happy feelings</span>
+			<span>beautiful butterflies</span>
+		</div>
+		<br />
+		<span>with a silent touch of</span>
+		<div class="rw-words rw-words-2">
+			<span>sugar</span>
+			<span>spice</span>
+			<span>colors</span>
+			<span>happiness</span>
+			<span>wonder</span>
+			<span>happiness</span>
+		</div>
+	</h2>
+</section>
 
 <h3>Fresh Picked Flowers</h3>
-<% @flowers.each do |flower| %>
-	<h3><%= flower.name %> </h3><br/>
-	<img class="main-image" src="<%= flower.content%>"/><br>
-	<%= link_to 'Show Flower', user_flower_path(flower.user_id, flower.id) %><br>
-<% end %>
-
-<% @users.each do |user| %>
-	<h3><%= user.email %> </h3><br/>
-	<%= link_to 'Show', user_path(user.id) %><br>
-<% end %>
-
+<ul class="lb-album">
+	<% @flowers.reverse_each do |flower| %>
+		<li>
+			<a href="#image-<%=flower.id%>">
+				<img class="main-image" src="<%= flower.content%>" alt="flower picture 1"/>
+				<span><%= flower.name %></span>
+			</a>
+			<div class="lb-overlay" id="image-<%=flower.id%>">
+				<img src="<%= flower.content%>" alt="flower picture 1"/>
+				<div>
+					<h3><%= flower.name %><span>/<%=flower.name%>/</h3>
+					<p>The soft petals blowing through the wind. Or some shit.</p>
+					<a href="image-10" class="lb-prev">Prev</a>
+					<a href="#image-2" class="lb-next">Next</a>
+					<%= link_to 'Show Flower', user_flower_path(flower.user_id, flower.id) %><br>
+				</div>
+				<a href="#page" class="lb-close">x Close</a>
+			</div>
+		</li>	
+	<% end %>
+</ul>
 
 
 
