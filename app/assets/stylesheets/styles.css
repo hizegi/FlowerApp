@@ -1,5 +1,19 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
 body{
-	background: snow;
+	font-family: 'Pompiere', cursive;
+	font-size: 1.5em;
+}
+
+/*******************/
+/* MAIN PAGE       */
+/*******************/
+#main-wrapper {
+	width: 100%;
+	text-align: center;
 }
 
 #img-div {
@@ -13,6 +27,35 @@ body{
 	max-width: 400px;
 }
 
+h3 {
+	font-family: 'Cutive Mono', sans-serif;
+}
+/*******************/
+/* NAV BAR STUFF   */
+/*******************/
+
+#header-banner {
+	text-align: center;
+	height: 123px;
+	/*background: #EAE5E5;*/
+	background: rgb(241,210,194);
+}
+
+#header-banner h1{ 
+    font-size: 2em;
+    margin-top: 1em;
+   font-family: 'Pompiere', cursive;
+}
+
+#header-banner p {
+	font-size: .8em;
+    text-align: right;
+}
+
+#home-link {
+	color: black;
+	text-decoration: none;
+}
 
 /*******************/
 /* HEADER QUOTE    */
@@ -21,14 +64,15 @@ body{
 .rw-wrapper{
 	width: 80%;
 	position: relative;
-	font-family: 'Bree Serif';
+	font-family: 'Cutive Mono', sans-serif;
 	padding: 10px;
 }
 
 .rw-sentence{
 	margin: 0;
-	text-align: left;
+	text-align: center;
 	text-shadow: 1px 1px 1px rgba(255,255,255,0.8);
+	margin-top: 30px;
 }
 
 #indent {
@@ -39,7 +83,6 @@ body{
 
 	color: #444;
 	white-space: nowrap;
-	font-size: 200%;
 	font-weight: normal;
 }
 
@@ -52,6 +95,7 @@ body{
 	position: absolute;
 	opacity: 0;
 	overflow: hidden;
+	text-align: left;
 	width: 100%;
 	color: #6b969d;
 }
@@ -97,22 +141,69 @@ body{
 }
 
 /**************/
+/* FORM STUFF  */
+/***************/
+
+.form-stuff {
+	text-align: center;
+	margin-top: 30px;
+}
+
+.form-stuff h2{
+	font-family: 'Cutive Mono', sans-serif;
+}
+
+/***************/
+/* SHOW PAGES  */
+/***************/
+
+.photo-div {
+	display: inline-block;
+	margin: 30px;
+	position: relative;
+	width: 180px;
+	height: 180px;
+}
+
+.photo-div img{
+	width: 100%;
+}
+
+.photo-div span {
+	width: 40px;
+	display: block;
+	position: absolute;
+	top: -12px;
+	left: 90px;
+	background: url('../images/tape2.png');
+}
+
+/**************/
 /* PAGE LAYOUT */
 /***************/
+
 .main-image {
 	width: 150px;
 	height: 150px;
 }
 
-.lb-album{
-	list-style-type: none;
+.lb-album a{
+	color: black;
+	text-decoration: none;
+	
 }
 
+
+.lb-album a:hover {
+	text-decoration: underline;
+}
 .lb-album{
+	list-style-type: none;
 	width: 900px;
 	margin: 0 auto;
-	font-family: 'BebasNeueRegular', 'Arial Narrow', Arial, sans-serif;
 }
+
+
 .lb-album li{
 	float: left;
 	margin: 5px;
@@ -123,11 +214,12 @@ body{
 	display: block;
 }
 .lb-album li > a{
+	font-size: 2em;
 	width: 150px;
 	height: 150px;
 	position: relative;
 	padding: 10px;
-	background: #f1d2c2;
+	background: white;
 	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
 	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
 	box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
@@ -163,6 +255,7 @@ body{
 	transition: opacity 0.3s linear;
 }
 .lb-album li > a:hover span{
+	border-bottom: 1px solid grey;
 	opacity: 1;
 	filter: alpha(opacity=99); /* internet explorer */
     -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
@@ -203,7 +296,6 @@ body{
 .lb-overlay div h3,
 .lb-overlay div p{
 	padding: 0px 20px;
-	width: 200px;
 	height: 60px;
 }
 .lb-overlay div h3{

@@ -1,45 +1,48 @@
-<section class="rw-wrapper">
-	<h1>InstaFlower</h1>
-	<h2 class="rw-sentence">
-		<span>Where flowers bloom so does</span>
-		<div class="rw-words rw-words-2">
-			<span>love.</span>
-			<span>happiness.</span>
-			<span>hope.</span>
-			<span>beauty.</span>
-			<span>peace.</span>
-			<span>wonder.</span>
-		</div>
-	</h2>
-</section>
-
-<h3>Fresh Picked Flowers</h3>
-<ul class="lb-album">
-	<% @flowers.reverse_each do |flower| %>
-		<li>
-			<a href="#image-<%=flower.id%>">
-				<img class="main-image" src="<%= flower.content%>" alt="flower picture 1"/>
-				<span><%= flower.name %></span>
-			</a>
-			<div class="lb-overlay" id="image-<%=flower.id%>">
-				<img src="<%= flower.content%>" alt="flower picture 1"/>
-				<div>
-					<h3><%= flower.name %><span>/<%=flower.name%>/</h3>
-					<p><%= flower.description %></p>
-					<a href="#image-<%=flower.id + 1 %>" class="lb-prev">Prev</a>
-					<a href="#image-<%=flower.id - 1 %>" class="lb-next">Next</a>
-					<%= link_to 'Visit Flower', user_flower_path(flower.user_id, flower.id) %><br>
-				</div>
-				<a href="#page" class="lb-close">x Close</a>
+<section id="main-wrapper">
+	<section class="rw-wrapper">
+		<h2 class="rw-sentence">
+			<span>Where flowers bloom so does</span>
+			<div class="rw-words rw-words-2">
+				<span>love.</span>
+				<span>happiness.</span>
+				<span>hope.</span>
+				<span>beauty.</span>
+				<span>peace.</span>
+				<span>wonder.</span>
 			</div>
-		</li>	
-	<% end %>
-</ul>
+		</h2>
+	</section>
+
+	<br>
+
+	<h3>Fresh Picked Flowers:</h3>
+	<br>
+
+	<ul class="lb-album">
+		<% @flowers.reverse_each do |flower| %>
+			<li>
+				<a href="#image-<%=flower.id%>">
+					<img class="main-image" src="<%= flower.content%>" alt="flower picture 1"/>
+					<span><%= flower.name %></span>
+				</a>
+				<div class="lb-overlay" id="image-<%=flower.id%>">
+					<img src="<%= flower.content%>" alt="flower picture 1"/>
+					<div>
+						<h3><%= flower.name %><span>/<%=flower.name%>/</h3>
+						<p><%= flower.description %></p>
+						<a href="#image-<%=flower.id + 1 %>" class="lb-prev">Prev</a>
+						<a href="#image-<%=flower.id - 1 %>" class="lb-next">Next</a>
+						<%= link_to 'Visit Flower', user_flower_path(flower.user_id, flower.id) %><br>
+					</div>
+					<a href="#page" class="lb-close">x Close</a>
+				</div>
+			</li>	
+		<% end %>
+	</ul>
+</section>
 
 
 <br><br>
-<% if user_signed_in? %>
-	<h1><%= link_to 'Post a New Flower', new_user_flower_path(current_user.id)%></h1>
-<% end %>
+
 
 
