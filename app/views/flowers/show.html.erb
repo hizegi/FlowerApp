@@ -1,12 +1,17 @@
-<h1>Check out this flower!</h1>
+<section id="show-section">
+	<div id="show-div"><br>
 
-<h3><%= @flower.name%></h3>
-<img class="show-flower" src="<%= @flower.content %>">
-<p><%= @flower.description %></p>
-<br>
+		<h3><%= @flower.name%></h3><br>
+		<img class="show-flower" src="<%= @flower.content %>">
+		<img id="tape2" src="https://i127.photobucket.com/albums/p142/cy360/GA%20home%20page/tape2.png">
+		<p><%= @flower.description %></p>
+		<br>
 
 
-<% if @user == current_user %> <%= link_to 'Delete', @flower, :method => 'delete' %> <% end %>
-<% if @user == current_user %> <%= link_to 'Edit Post', edit_user_flower_path(@user, @flower.id) %> <% end %>
-<%= link_to 'InstaFlower Home', root_path %>
-<%= link_to 'User Page', user_path(@user.id) %>
+		<p> <% if @user == current_user %> <%= link_to 'Delete', @flower, :method => 'delete' %> <% end %>
+		<% if @user == current_user %> <%= link_to 'Edit Post', edit_user_flower_path(@user, @flower.id) %> <% end %>
+		<%= link_to 'InstaFlower Home', root_path %>
+		<%= link_to 'User Page', user_path(@user.id) %> </p>
+	</div>
+
+</section>

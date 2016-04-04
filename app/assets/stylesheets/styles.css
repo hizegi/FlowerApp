@@ -23,12 +23,8 @@ body{
 	position: relative;
 }
 
-.show-flower {
-	max-width: 400px;
-}
-
 h3 {
-	font-family: 'Cutive Mono', sans-serif;
+	font-family: 'Pompiere', cursive;
 }
 /*******************/
 /* NAV BAR STUFF   */
@@ -44,12 +40,21 @@ h3 {
 #header-banner h1{ 
     font-size: 2em;
     margin-top: 1em;
-   font-family: 'Pompiere', cursive;
 }
 
 #header-banner p {
 	font-size: .8em;
-    text-align: right;
+    text-align: center;
+}
+
+#header-banner a {
+	color: black;
+	text-decoration: none;
+	font-family: 'Cutive Mono', sans-serif;
+}
+
+#header-banner a:hover {
+	text-decoration: underline;
 }
 
 #home-link {
@@ -156,26 +161,104 @@ h3 {
 /***************/
 /* SHOW PAGES  */
 /***************/
+#gallery-wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
 
 .photo-div {
 	display: inline-block;
 	margin: 30px;
 	position: relative;
-	width: 180px;
-	height: 180px;
+	width: 200px;
+	text-align: center;
+	padding-top: 8px;
+	/*give the frame's background colour a gradient*/
+	background: #eee6d8; /*fallback colour for browsers that don't support gradients*/
+	background: -webkit-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: -moz-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: -o-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: -ms-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	/*give the Polaroids a small drop shadow*/
+	-webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+	-moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+	box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+}
+
+.photo-div:hover {
+	box-shadow: 4px 4px 8px -2px rgba(0, 0, 0, .75);
 }
 
 .photo-div img{
+	width: 90%;
+}
+
+.photo-div p {
+	font-size: 0.7em;
+}
+
+#show-section {
+	width: 90%;
+	margin: 0 auto;
+}
+
+#show-div{
+	position: relative;
+	text-align: center;
+	width: 60%;
+	margin: 0 auto;
+}
+
+#show-div p{
+	font-size: .8em;
+	color: black;
+	padding: 6px 8px 10px 8px; /*size of the frame*/
+	/*give the frame's background colour a gradient*/
+	background: #eee6d8; /*fallback colour for browsers that don't support gradients*/
+	background: -webkit-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: -moz-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: -o-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: -ms-linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	background: linear-gradient(top, #ede1c9, #fef8e2 20%, #f2ebde 60%);
+	/*give the Polaroids a small drop shadow*/
+	-webkit-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+	-moz-box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+	box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+}
+.show-flower {
+	max-width: 800px;
 	width: 100%;
 }
 
-.photo-div span {
-	width: 40px;
+#tape {
+	width: 97px;
 	display: block;
 	position: absolute;
-	top: -12px;
-	left: 90px;
-	background: url('../images/tape2.png');
+    top: -12px;
+    left: 54px;
+}
+
+#tape2 {
+    width: 120px;
+    display: block;
+    position: absolute;
+    top: 72px;
+    left: 40%;
+}
+
+#tape3 {
+    width: 79px;
+    display: block;
+    position: absolute;
+    top: -7px;
+    left: 30%;
+}
+
+#profile {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 /**************/
@@ -218,15 +301,16 @@ h3 {
 	width: 150px;
 	height: 150px;
 	position: relative;
+	margin-bottom: 10px;
 	padding: 10px;
-	background: white;
-	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
-	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
-	box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
-	-moz-border-radius: 4px;
-	-webkit-border-radius: 4px;
-	border-radius: 4px 4px 4px 4px;
+	padding-bottom: 30px;
+	background: rgb(238, 230, 216);
+	background: rgba(238, 230, 216, 0.59);
+	box-shadow: 4px 4px 8px -4px rgba(0, 0, 0, .75);
+/*	-webkit-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;
+	-moz-box-shadow: 1px 1px 2px #fff, 1px 1px 2px rgba(158,111,86,0.3) inset;*/
 }
+
 .lb-album li > a span{
 	position: absolute;
 	width: 150px;

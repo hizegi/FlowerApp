@@ -1,15 +1,16 @@
-<h1>Check out these flowers by <%= @user.email %></h1>
-Super cool
+<h2 id="profile"><%= @user.email %>'s fresh pics:</h2>
 
 <div id="gallery-wrapper">
-	<% @flowers.each do |f| %>
+	
+	
+	<% @flowers.each do |f| %>	
 	<div class="photo-div">
-		
-			<span></span>
 			<img src="<%= f.content %>">
 			<h4><%= f.name%></h4>
+			<img id="tape" src="https://i127.photobucket.com/albums/p142/cy360/GA%20home%20page/tape2.png">
 	
-			<%= link_to 'View Post', user_flower_path(@user, f.id) %>
-			<% end %>
+			<p><%= link_to 'View Post', user_flower_path(@user, f.id) %></p>
+			
 	</div>
+	<% end %>
 </div>
