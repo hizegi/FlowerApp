@@ -4,14 +4,15 @@
 
 (it may take a few seconds for Heroku to 'wake up')
 
-InstaFlowe is a simple photo sharing app where users can build their own collections.
+InstaFlower is a simple photo sharing app where users can build their own collections.
 
 ## Technologies Used
 
 * Ruby
 * Rails
+* Devise
 * PostgreSQL for database
-* server-side rendering:
+* Server-side rendering with erb:
 * HTML
 * CSS (media queries for mobile/tablet devices)
 	*[CSS Lightbox Reference](https://tympanus.net/codrops/2011/12/26/css3-lightbox/)
